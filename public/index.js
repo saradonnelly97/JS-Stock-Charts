@@ -16,24 +16,18 @@ const { GME, MSFT, DIS, BNTX } = mockData;
 
 const stocks = [GME, MSFT, DIS, BNTX];
 
+stocks.forEach( stock => stock.values.reverse())
 
-
-new Chart(ctx, {
-    type: 'bar',
+new Chart(timeChartCanvas.getContext('2d'), {
+    type: 'line',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-
-            ],
-            
+            backgroundColor:  'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)'
         }]
     }
 });
+
