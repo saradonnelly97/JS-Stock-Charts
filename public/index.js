@@ -11,3 +11,7 @@ main()
 const response = await fetch('https://api.twelvedata.com/time_series?apikey=dd41dd314e274130af2ad70a36185b00&interval=1day&symbol=TSLA&outputsize=1')
 
 const result = await response.json()
+
+const { GME, MSFT, DIS, BNTX } = mockData;
+
+const stocks = [GME, MSFT, DIS, BNTX];
