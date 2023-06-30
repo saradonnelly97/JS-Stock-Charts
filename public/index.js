@@ -95,4 +95,4 @@ function calculateAverage(values) {
     return total / values.length
 }
 
-main()p
+main()
